@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head><title>CSC355 Project Main Page Test</title></head>
-  <link type="text/css" rel="stylesheet" href="style.css"/>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
 
   <style>
-    
+    h1 {text-align: center;}
+
+
+    form {
+      width: 50%;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
   </style>
-  <body>
-    <p> testo baseo THIS IS A BIG TEST</p>
-    <p> part 2</p>
-  </body>
+
+</head>
+<body>
+
+  <h1>Building Information Form</h1>
+
+  <form>
+    <label for="buildingName">Building Name:</label>
+    <input type="text" id="buildingName" name="buildingName" required>
+
+    <label for="buildingAddress">Building Address:</label>
+    <input type="text" id="buildingAddress" name="buildingAddress" required>
+
+    <label for="buildingLatitude">Building Latitude:</label>
+    <input type="text" id="buildingLatitude" name="buildingLatitude" required>
+
+    <label for="buildingLongitude">Building Longitude:</label>
+    <input type="text" id="buildingLongitude" name="buildingLongitude" required>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
 </html>
