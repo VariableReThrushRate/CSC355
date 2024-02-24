@@ -5,6 +5,17 @@
     
   </style>
   <link type="text/css" rel="stylesheet" href="style.css"/>
+  <?php
+   function OpenCon()
+   {
+   $dbhost = "localhost";
+   $dbuser = "viewer";
+   $dbpass = "\$MUs8ints1";
+   $db = "LocationDB";
+   $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+   return $conn;
+   }
+   ?>
   <body>
     <table border="1">
        <tr>
