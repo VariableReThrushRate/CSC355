@@ -154,7 +154,7 @@
        <tr>
                 <td>SMU JBLM Campus</td>
                 <td>851 Lincoln Blvd SW, McChord AFB, WA 98439</td>
-                <td>47.122444120879386-122.50408046508258</td>
+                <td>47.122444120879386</td>
                 <td>-122.50408046508258</td>
         <tr>       
         
