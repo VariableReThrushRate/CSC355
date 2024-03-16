@@ -17,6 +17,8 @@
    }
    ?>
   <body>
+  <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
     <table border="1">
        <tr>
         <th>Building Name</th>
