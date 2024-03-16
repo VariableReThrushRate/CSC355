@@ -127,12 +127,19 @@
               <td>-122.8207650299286</td>
               <td>47.03958000510115</td>
        <tr>
-        <tr>
+       <tr>
                 <td>Heider Hall</td>
                 <td>Lacey, WA 98503</td>
                 <td>-122.80735183427004</td>
                 <td>47.04415700453479</td>
-        <tr>      
+       <tr>
+       <tr>
+                <td>SMU JBLM Campus</td>
+                <td>McChord AFB, WA 98439</td>
+                <td>-122.50408046508258</td>
+                <td>47.122444120879386</td>
+        <tr>       
+        
 
        </table>
   </body>
