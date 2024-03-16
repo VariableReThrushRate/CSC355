@@ -129,13 +129,13 @@
        <tr>
        <tr>
                 <td>Heider Hall</td>
-                <td>Lacey, WA 98503</td>
+                <td>5000 Abbey Way SE, Lacey, WA 98503</td>
                 <td>-122.80735183427004</td>
                 <td>47.04415700453479</td>
        <tr>
        <tr>
                 <td>SMU JBLM Campus</td>
-                <td>McChord AFB, WA 98439</td>
+                <td>851 Lincoln Blvd SW, McChord AFB, WA 98439</td>
                 <td>-122.50408046508258</td>
                 <td>47.122444120879386</td>
         <tr>       
