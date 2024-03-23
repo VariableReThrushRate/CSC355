@@ -2,7 +2,28 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="style.css"/>
-
+  <script type = "text/javascript">
+      const stmartin =  /^[^\s@]+@stmartin\.edu$/i;
+      function smucheck(form) {
+      var inputElement = form.querySelector('#string');
+      check = inputElement.value;;
+      if (check == null)
+      {
+          alert("sorry");
+          return;
+      }
+      length = check.length;
+      console.log(stmartin.test(check));
+      console.log(check);
+      if (stmartin.test(check))
+      {
+          alert("String length is: " + length + "\nThank you!")
+      }
+      else
+      {
+          alert("String length is: " + length + "\nSorry")
+      }}
+  </script>
   <style>
 
   </style>
@@ -11,7 +32,7 @@
 <body>
 
   <h1>Building Information Form</h1>
-
+  
   <form>
     <label class="formleft" for="buildingName">Building Name:</label>
     <input type="text" id="buildingName" name="buildingName" required>
