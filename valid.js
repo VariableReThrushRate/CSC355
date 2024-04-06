@@ -44,7 +44,7 @@ function formacc(form) {
         window.alert("Building Longitude! input is invalid! \n Please check it.")
         return;
     }
-    if (buildpurp == '' || !text.test(buildpurp)){
+    if (buildpurp == '' || !text.test(buildpurp) || checklen(buildpurp)){
         window.alert("Building Purpose input is invalid! \n Please check it.")
         return;
     }
@@ -59,4 +59,13 @@ function callins(building){
     }
     xhttp.open("GET", "ajax_info.txt", true);
     xhttp.send();
-}   
+}  
+function checklen(text){
+    if (text.length <= 255){
+        return false;
+    }
+    else if (text.length <= 0) {
+        return true;
+    }
+    else { return true;}
+} 
