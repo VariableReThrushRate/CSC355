@@ -28,11 +28,11 @@ function formacc(form) {
     var latitude = form.querySelector('#buildLat').value;
     var longitude = form.querySelector('#buildLong').value;
     var buildpurp = form.querySelector('#buildPurp').value;
-    if (name == '' || !vname.test(name)){
+    if (name == '' || !vname.test(name) || checklen(name)){
         window.alert("Building name input is invalid! \n Please check it.")
         return;
     }
-    if (address == '' || !addr.test(address)){
+    if (address == '' || !addr.test(address) || checklen(address)){
         window.alert("Building Address input is invalid! \n Please check it.")
         return;
     }
