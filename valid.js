@@ -19,16 +19,18 @@ else
     alert("String length is: " + length + "\nSorry")
 }}
 function formacc(form) {
+    var vname = new RegExp("[A-Za-z0-9'\.\-\s\,]");
     var latlong = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,9}");
+    var addr =  new RegExp("\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\.");
     var name = form.querySelector('#buildName').value;
     var address = form.querySelector('#buildAdd').value;
     var latitude = form.querySelector('#buildLat').value;
     var longitude = form.querySelector('#buildLong').value;
-    if (name == ''){
+    if (name == '' || !vname.test(name)){
         window.alert("Building name input is invalid! \n Please check it.")
         return;
     }
-    if (address == ''){
+    if (address == '' || !addr.test(address)){
         window.alert("Building Address input is invalid! \n Please check it.")
         return;
     }
