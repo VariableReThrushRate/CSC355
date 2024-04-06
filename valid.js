@@ -19,6 +19,7 @@ else
     alert("String length is: " + length + "\nSorry")
 }}
 function formacc(form) {
+    var text = new RegExp("/^\S.*(?:\r?\n\S.*)*$/u");
     var vname = new RegExp("[A-Za-z0-9'\.\-\s\,]");
     var latlong = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,9}");
     var addr =  new RegExp("\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\.");
@@ -43,7 +44,7 @@ function formacc(form) {
         window.alert("Building Longitude! input is invalid! \n Please check it.")
         return;
     }
-    if (buildpurp == '' || !vname.test(buildpurp)){
+    if (buildpurp == '' || !text.test(buildpurp)){
         window.alert("Building Purpose input is invalid! \n Please check it.")
         return;
     }
