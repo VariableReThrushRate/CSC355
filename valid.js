@@ -19,6 +19,7 @@ else
     alert("String length is: " + length + "\nSorry")
 }}
 function formacc(form) {
+    var latlong = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,9}");
     var name = form.querySelector('#buildName').value;
     var address = form.querySelector('#buildAdd').value;
     var latitude = form.querySelector('#buildLat').value;
@@ -31,11 +32,11 @@ function formacc(form) {
         window.alert("Building Address input is invalid! \n Please check it.")
         return;
     }
-    if (latitude == ''){
+    if (latitude == '' || !latlong.test(latitude)){
         window.alert("Building Latitude input is invalid! \n Please check it.")
         return;
     }
-    if (longitude == ''){
+    if (longitude == '' || !latlong.test(longitude)){
         window.alert("Building Longitude! input is invalid! \n Please check it.")
         return;
     }
