@@ -26,6 +26,7 @@ function formacc(form) {
     var address = form.querySelector('#buildAdd').value;
     var latitude = form.querySelector('#buildLat').value;
     var longitude = form.querySelector('#buildLong').value;
+    var buildpurp = form.querySelector('#buildPurp').value;
     if (name == '' || !vname.test(name)){
         window.alert("Building name input is invalid! \n Please check it.")
         return;
@@ -42,7 +43,12 @@ function formacc(form) {
         window.alert("Building Longitude! input is invalid! \n Please check it.")
         return;
     }
-    building = [name, address, latitude, longitude]
+    if (buildpurp == '' || !vname.test(buildpurp)){
+        window.alert("Building Purpose input is invalid! \n Please check it.")
+        return;
+    }
+    building = [name, address, latitude, longitude, buildpurp]
+    //needs to be completed with AJAX call to work with unimplimented PHP insert function.
 }
 //Needs to be updated to function with our code, but basic GET request
 function callins(building){
