@@ -5,24 +5,38 @@
   <style>
     
   </style>
-  
+  <?php 
+  function OpenCon()
+  {
+  $dbhost = "localhost";
+  $dbuser = "viewer";
+  $dbpass = "\$MUs8ints1";
+  $db = "LocationDB";
+  $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+  return $conn;
+  }
+  $conn <- OpenCon();
+  $id = 0;
+  $opt = $conn -> query("SELECT * FROM building WHERE id = $id");
+  $row = mysqli_fetch_assoc($opt);
+  ?>
   <body>
-    <h1>Details on Harned Hall</h1>
+    <h1>Details on your selected buulding!</h1>
     <table border="1">
         <tbody>
             <tr>
                 <th>Building Name</th>
                 <th>Building Address</th>
-                <th>Building Latitude</th>
                 <th>Building Longtitude</th>
+                <th>Building Latitude</th>
                 <th>Building Purpose</th>
 
             </tr>
             <tr>
-                <td>Harned Hall</td>
-                <td>5000 Abbey Way SE, Lacey, WA 98503</td>
-                <td>47.04020660973897</td>
-                <td>-122.8170321366417</td>
+                <td><?php echo($row[1]);?></td>
+                <td><?php echo($row[2]);?></td>
+                <td><?php echo($row[3]);?></td>
+                <td><?php echo($row[4]);?></td>
                 <td>Academic Instruction</td>
             </tr>
         </tbody>

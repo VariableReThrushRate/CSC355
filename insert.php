@@ -14,4 +14,4 @@ $long <- "placeholder";
 $lat <- "placeholder";
 $purpose <- "placeholder";
 $conn <- OpenCon();
-$conn <- query("INSERT INTO building VALUES ($name), ($add), ($long), ($lat), ($purpose)");
+$opt = $conn -> query("INSERT INTO building VALUES ($name), ($add), ($long), ($lat), ($purpose)");
