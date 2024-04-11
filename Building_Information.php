@@ -16,12 +16,13 @@
   return $conn;
   }
   $conn <- OpenCon();
-  $id = 0;
+  $sid = $_GET['id'];
+  $id = intval($sid);
   $opt = $conn -> query("SELECT * FROM building WHERE id = $id");
   $row = mysqli_fetch_assoc($opt);
   ?>
   <body>
-    <h1>Details on your selected buulding!</h1>
+    <h1>Details on your selected building!</h1>
     <table border="1">
         <tbody>
             <tr>
