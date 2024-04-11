@@ -38,7 +38,7 @@
                 <td><?php echo($row[2]);?></td>
                 <td><?php echo($row[3]);?></td>
                 <td><?php echo($row[4]);?></td>
-                <td>Academic Instruction</td>
+                <td><?php echo($row[5]);?></td>
             </tr>
         </tbody>
     </table>
