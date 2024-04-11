@@ -42,7 +42,5 @@
             </tr>
         </tbody>
     </table>
-    <br/>
-    <img width="600" height="auto" src="https://formacc.com/wp-content/uploads/2014/01/HH-SMU.jpg" alt="Image of Harned Hall" title="Harned Hall">
   </body>
 </html>
