@@ -17,9 +17,11 @@ USE LocationDB;
 
 -- Create each individual printer table!
 CREATE TABLE LocationDB.building (
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(255),
 	address VARCHAR(255),
     longitude DOUBLE PRECISION,
     latitude DOUBLE PRECISION,
     purpose VARCHAR(255),
+    PRIMARY KEY (id)
 );

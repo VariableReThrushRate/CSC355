@@ -2,8 +2,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="style.css"/>
-    <img src="https://www.commonapp.org/static/26302d7c6d528f93fff0c99b0974c850/saint-martins-university_476.jpg" alt="SMU LOGO"  width="auto"; height= "100"; position= "relative"; margin = "20";>
-  
+  <script type = "text/javascript" src="./valid.js"></script>
   <style>
     h1 {text-align: center;}
 
@@ -39,9 +38,9 @@
 </head>
 <body>
 
-  <h1>SMU Building Information Form</h1>
-
-  <form>
+  <h1>Building Information Form</h1>
+  
+  <form onsubmit="validate(this); return false;">
     <label class="formleft" for="buildingName">Building Name:</label>
     <input type="text" id="buildingName" name="buildingName" required>
 
@@ -52,10 +51,22 @@
     <input type="text" id="buildingLatitude" name="buildingLatitude" required>
 
     <label class="formleft" for="buildingLongitude">Building Longitude:</label>
-    <input type="text" id="buildingLongitude" name="buildingLongitude" required>
+    <input type="text" id="buildLong" name="buildingLongitude" required>
+
+    <label class="formleft" for="buildingLongitude">Building Purpose:</label>
+    <input type="textarea" id="buildpurp" name="buildingPurpose" required>
+
 
     <input type="submit" value="Submit">
   </form>
+  <div id="response"></div>
 
+    <script>
+      function ugh(e){
+        bruh = formacc(e); // Assuming formacc is a function defined elsewhere
+        
+      }
+    // AJAX call
+    </script>
 </body>
 </html>
