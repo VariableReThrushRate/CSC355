@@ -3,6 +3,8 @@
 <head>
     <link type="text/css" rel="stylesheet" href="style.css"/>
   <script type = "text/javascript" src="./valid.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <style>
 
   </style>
@@ -12,7 +14,7 @@
 
   <h1>Building Information Form</h1>
   
-  <form onsubmit="validate(this); return false;">
+  <form onsubmit="ugh(this); return false;">
     <label class="formleft" for="buildingName">Building Name:</label>
     <input type="text" id="buildName" name="buildingName" required>
 
@@ -26,12 +28,20 @@
     <input type="text" id="buildLong" name="buildingLongitude" required>
 
     <label class="formleft" for="buildingLongitude">Building Purpose:</label>
-    <input type="textarea" id="buildpurp" name="buildingPurpose" required>
+    <input type="textarea" id="buildPurp" name="buildingPurpose" required>
 
 
     <input type="submit" name="submit" value="Submit">
     <input type="reset" name="reset" value="Reset" />
   </form>
+  <div id="response"></div>
 
+    <script>
+      function ugh(e){
+        bruh = formacc(e); // Assuming formacc is a function defined elsewhere
+        
+      }
+    // AJAX call
+    </script>
 </body>
 </html>
