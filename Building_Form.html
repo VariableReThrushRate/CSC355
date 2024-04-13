@@ -70,13 +70,19 @@
         bruh = formacc(e); // Assuming formacc is a function defined elsewhere
         if (bruh == null){
           document.getElementById('response').innerHTML = "Form Validation FAILED!";
-
         }
         else {
-
+          var formData = new FormData(bruh);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'insert.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('response').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(formData);
         }
       }
-    // AJAX call
     </script>
 </body>
 </html>
