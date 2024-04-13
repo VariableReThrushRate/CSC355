@@ -42,24 +42,26 @@
 
   <h1>Building Information Form</h1>
   
-  <form onsubmit="validate(this); return false;">
+    
+  <form onsubmit="ugh(this); return false;">
     <label class="formleft" for="buildingName">Building Name:</label>
-    <input type="text" id="buildingName" name="buildingName" required>
+    <input type="text" id="buildName" name="buildingName" required>
 
     <label class="formleft" for="buildingAddress">Building Address:</label>
-    <input type="text" id="buildingAddress" name="buildingAddress" required>
+    <input type="text" id="buildAdd" name="buildingAddress" required>
 
     <label class="formleft" for="buildingLatitude">Building Latitude:</label>
-    <input type="text" id="buildingLatitude" name="buildingLatitude" required>
+    <input type="text" id="buildLat" name="buildingLatitude" required>
 
     <label class="formleft" for="buildingLongitude">Building Longitude:</label>
     <input type="text" id="buildLong" name="buildingLongitude" required>
 
     <label class="formleft" for="buildingLongitude">Building Purpose:</label>
-    <input type="textarea" id="buildpurp" name="buildingPurpose" required>
+    <input type="textarea" id="buildPurp" name="buildingPurpose" required>
 
 
-    <input type="submit" value="Submit">
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" name="reset" value="Reset" />
   </form>
   <div id="response"></div>
 
