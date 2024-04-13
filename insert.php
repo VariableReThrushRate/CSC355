@@ -8,7 +8,7 @@ $db = "LocationDB";
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
 return $conn;
 }
-$name <- "placeholder";
+$name <- $_POST['buildName'];
 $add <- "placeholder";
 $long <- "placeholder";
 $lat <- "placeholder";

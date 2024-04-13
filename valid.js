@@ -1,9 +1,11 @@
 function formacc(form) {
     var oldform = form;
-    var text = new RegExp("/^\S.*(?:\r?\n\S.*)*$/u");
+    var text = new RegExp('^(?:\\S.*(?:\\r?\\n\\S.*)*|\\S*)$', 'u');
     var vname = new RegExp("[A-Za-z0-9'\.\-\s\,]");
-    var latlong = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,9}");
-    var addr =  new RegExp("\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\.");
+    var lat = new RegExp("^(\\+|-)?(?:90(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\\.[0-9]{1,6})?))$");
+    var long = new RegExp("(\\+|-)?(?:180(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\\.[0-9]{1,6})?))$");
+    //Thanks Marco!
+    var addr =  new RegExp("\d{1,5}\s[\w\s.,#-]+(?:\s\w+)?\.");
     var name = form.querySelector('#buildName').value;
     var address = form.querySelector('#buildAdd').value;
     var latitude = form.querySelector('#buildLat').value;
@@ -13,15 +15,15 @@ function formacc(form) {
         window.alert("Building name input is invalid! \n Please check it.")
         return null;
     }
-    if (address == '' || !addr.test(address) || checklen(address)){
+    if (address == '' || addr.test(address) || checklen(address)){
         window.alert("Building Address input is invalid! \n Please check it.")
         return null;
     }
-    if (latitude == '' || !latlong.test(latitude)){
+    if (latitude == '' || !lat.test(latitude)){
         window.alert("Building Latitude input is invalid! \n Please check it.")
         return null;
     }
-    if (longitude == '' || !latlong.test(longitude)){
+    if (longitude == '' || !long.test(longitude)){
         window.alert("Building Longitude! input is invalid! \n Please check it.")
         return null;
     }
