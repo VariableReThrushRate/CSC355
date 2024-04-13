@@ -5,7 +5,35 @@
   <script type = "text/javascript" src="./valid.js"></script>
 
   <style>
+    h1 {text-align: center;}
 
+    form {
+      width: 50%;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #BA0C2F;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #BA0C2F;
+    }
   </style>
 
 </head>
@@ -39,6 +67,10 @@
       function ugh(e){
         bruh = formacc(e); // Assuming formacc is a function defined elsewhere
         if (bruh == null){
+          document.getElementById('response').innerHTML = "Form Validation FAILED!";
+
+        }
+        else {
 
         }
       }
