@@ -9,9 +9,9 @@ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n".
 return $conn;
 }
 $name <- $_POST['buildName'];
-$add <- "placeholder";
-$long <- "placeholder";
-$lat <- "placeholder";
-$purpose <- "placeholder";
+$add <- $_POST['buildAdd'];
+$long <- $_POST['buildLong'];
+$lat <- $_POST['buildLat'];
+$purpose <- $_POST['buildName'];
 $conn <- OpenCon();
-$opt = $conn -> query("INSERT INTO building VALUES ($name), ($add), ($long), ($lat), ($purpose)");
+$opt = $conn -> query("INSERT INTO building VALUES ($name), ($add), ($lat), ($long), ($purpose)");
