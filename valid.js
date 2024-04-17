@@ -31,8 +31,8 @@ function formacc(form) {
         window.alert("Building Purpose input is invalid! \n Please check it.")
         return null;
     }
-    //building = [name, address, latitude, longitude, buildpurp]
-    return oldform;
+    building = [name, address, latitude, longitude, buildpurp]
+    return building;
     //needs to be completed with AJAX call to work with unimplimented PHP insert function.
 }
 //Needs to be updated to function with our code, but basic GET request
