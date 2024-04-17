@@ -11,7 +11,7 @@
    $dbpass = "\$MUs8ints1";
    $db = "LocationDB";
    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-   $opt = $conn -> query("SELECT * FROM building");
+   $opt = $conn -> query("SELECT id, name, address, latitude, longitude FROM building");
 
    ?>
   <body>
@@ -29,9 +29,12 @@
       if ($opt != null) {
       
           while($row = mysqli_fetch_object($result)) {
-              echo '<tr>\n';
-              echo '<td></td>';
-              echo '</tr>\n';
+              echo '<tr>';
+              echo '<td>' . $row[1] . '</td>';
+              echo '<td>' . $row[2] . '</td>';
+              echo '<td>' . $row[3] . '</td>';
+              echo '<td>' . $row[4] . '</td>';
+              echo '</tr>\n<br>';
           }
       
       }
