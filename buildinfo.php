@@ -2,21 +2,23 @@
 <html>
   <head><title>CSC355 Project Details Page</title></head>
   <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="mapdex.js"></script>
+
   <style>
-    
+    #map {
+  height: 100%;
+}
+
   </style>
+
+  
   <?php 
-  function OpenCon()
-  {
   $dbhost = "localhost";
   $dbuser = "viewer";
   $dbpass = "\$MUs8ints1";
   $db = "LocationDB";
   $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-  return $conn;
-  
-  }
-  $conn <- OpenCon();
   $sid = $_GET['id'];
   $id = intval($sid);
   $opt = $conn -> query("SELECT * FROM building WHERE id = $id");
@@ -35,13 +37,22 @@
 
             </tr>
             <tr>
-                <td><?php echo($row[1]);?></td>
-                <td><?php echo($row[2]);?></td>
-                <td><?php echo($row[3]);?></td>
-                <td><?php echo($row[4]);?></td>
-                <td><?php echo($row[5]);?></td>
+                <td><?php echo($row['name']);?></td>
+                <td><?php echo($row['address']);?></td>
+                <td><?php echo($row['latitude']);?></td>
+                <td><?php echo($row['longitude']);?></td>
+                <td><?php echo($row['purpose']);?></td>
             </tr>
         </tbody>
     </table>
-  </body>
+    <script>
+      // Initialize and add the map
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyDJ1hTb9kNjdiqVJUFmyp4dVEczkOr-49I", v: "weekly"});
+
+    </script>
+  <div id="map"></div>
+  
+
+</body>
 </html>
