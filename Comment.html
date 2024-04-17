@@ -2,7 +2,6 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="valid.js"></script>
 
   <style>
@@ -27,17 +26,8 @@
     <input type="submit" value="Submit">
   </form>
   <script>
-    function bruh($form){
-      var echo = valid
-      $.ajax({
-                url: 'insert.php', // PHP file to handle the request
-                type: 'post',
-                data: $(this).serialize(), // Serialize form data
-                success: function(response){
-                    $('#response').html(response); // Display response
-                }
-            });
-    }
+    
+      
 </script>
 </body>
 </html>
