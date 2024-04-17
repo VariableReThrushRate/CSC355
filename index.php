@@ -25,7 +25,16 @@
               <th>Building Longitude</th>
        </tr>
       <?php
+
+      if ($opt != null) {
       
+          while($row = mysqli_fetch_object($result)) {
+              echo '<tr>\n';
+              echo '<td></td>';
+              echo '</tr>\n';
+          }
+      
+      }
        ?>
        </table>
   </body>
