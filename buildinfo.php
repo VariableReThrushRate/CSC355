@@ -6,9 +6,7 @@
   <script type="module" src="mapdex.js"></script>
 
   <style>
-    #map {
-  height: 100%;
-}
+    #map {height: 500px; width: auto;}
 
   </style>
 
@@ -51,6 +49,7 @@
         ({key: "AIzaSyDJ1hTb9kNjdiqVJUFmyp4dVEczkOr-49I", v: "weekly"});
 
     </script>
+
   <div id="map"></div>
   
 
