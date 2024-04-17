@@ -2,8 +2,8 @@ function formacc(form) {
     var oldform = form;
     var text = new RegExp('^(?:\\S.*(?:\\r?\\n\\S.*)*|\\S*)$', 'u');
     var vname = new RegExp("[A-Za-z0-9'\.\-\s\,]");
-    var lat = new RegExp("^(\\+|-)?(?:90(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\\.[0-9]{1,6})?))$");
-    var long = new RegExp("(\\+|-)?(?:180(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\\.[0-9]{1,6})?))$");
+    var lat = new RegExp("^(\\+|-)?(?:90(?:(?:\\.0{1,10})?)|(?:[0-9]|[1-8][0-9])(?:(?:\\.[0-9]{1,10})?))$");
+    var long = new RegExp("(\\+|-)?(?:180(?:(?:\\.0{1,10})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\\.[0-9]{1,10})?))$");
     //Thanks Marco!
     var addr =  new RegExp("\d{1,5}\s[\w\s.,#-]+(?:\s\w+)?\.");
     var name = form.querySelector('#buildName').value;
