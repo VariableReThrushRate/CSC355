@@ -28,13 +28,13 @@
 
       if ($opt != null) {
       
-          while($row = mysqli_fetch_object($result)) {
+          while($row = mysqli_fetch_assoc($opt)) {
               echo '<tr>';
-              echo '<td>' . $row[1] . '</td>';
-              echo '<td>' . $row[2] . '</td>';
-              echo '<td>' . $row[3] . '</td>';
-              echo '<td>' . $row[4] . '</td>';
-              echo '</tr>\n<br>';
+              echo '<td>' . $row['name'] . '</td>';
+              echo '<td>' . $row['address'] . '</td>';
+              echo '<td>' . $row['latitude'] . '</td>';
+              echo '<td>' . $row['longitude'] . '</td>';
+              echo '</tr><br>';
           }
       
       }
