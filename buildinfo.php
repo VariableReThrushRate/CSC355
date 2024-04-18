@@ -28,8 +28,8 @@
             <tr>
                 <th>Building Name</th>
                 <th>Building Address</th>
-                <th>Building Longtitude</th>
                 <th>Building Latitude</th>
+                <th>Building Longtitude</th>
                 <th>Building Purpose</th>
 
             </tr>
