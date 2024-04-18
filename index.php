@@ -23,6 +23,7 @@
               <th>Building Address</th>
               <th>Building Latitude</th>
               <th>Building Longitude</th>
+              <th>Building Info Link</th>
        </tr>
       <?php
 
@@ -34,6 +35,7 @@
               echo '<td>' . $row['address'] . '</td>';
               echo '<td>' . $row['latitude'] . '</td>';
               echo '<td>' . $row['longitude'] . '</td>';
+              echo '<td><a href="buildinfo.php?id=' . $row['id'] . '">Details Page</a></td>';
               echo '</tr>';
           }
       

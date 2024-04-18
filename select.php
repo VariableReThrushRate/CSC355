@@ -16,6 +16,7 @@ else
   echo('       <th>Building Address</th>');
   echo('       <th>Building Latitude</th>');
   echo('       <th>Building Longitude</th>');
+  echo('<th>Building Info Link!</th>');
   echo('</tr>');
  
 
@@ -27,6 +28,7 @@ else
          echo '<td>' . $row['address'] . '</td>';
          echo '<td>' . $row['latitude'] . '</td>';
          echo '<td>' . $row['longitude'] . '</td>';
+         echo '<td><a href="buildinfo.php?id=' . $row['id'] . '">Details Page</a></td>';
          echo '</tr>';
      }
  
