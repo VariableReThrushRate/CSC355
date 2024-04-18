@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 $conn = mysqli_connect("127.0.0.1", "viewer", "\$MUs8ints1", "LocationDB");
 $name = $_POST['Search'];
-$opt = $conn -> query("SELECT * FROM building WHERE name LIKE %$name%");
+$opt = $conn -> query("SELECT * FROM building WHERE LOWER(name) LIKE LOWER('%$name%')");
 if(!$opt)
 {
     echo mysqli_error($conn);
@@ -10,7 +10,7 @@ if(!$opt)
 }
 else
 {
-  echo('table border="1">');
+  echo('<table border="1">');
   echo('<tr>');
   echo('       <th>Building Name</th>');
   echo('       <th>Building Address</th>');

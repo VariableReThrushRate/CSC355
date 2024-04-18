@@ -53,13 +53,12 @@ function checklen(text){
     }
     else { return true;}
 } 
-function validsearch($form) {
-    var oldform = form;
+function validsearch(form) {
     var vsearch = new RegExp("[A-Za-z0-9'\.\-\s\,]");    
     var Search = form.querySelector('#Search').value;
     if (Search == '' || !vsearch.test(Search) || checklen(Search)){
         window.alert("Your input was not valid! \n Please check it.")
         return null;
     }
-    return building;  
+    return true;  
 }

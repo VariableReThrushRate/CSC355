@@ -10,8 +10,8 @@
 </head>
 <body>
   <h1>Building Search area!</h1>
-  <form id="Search" onsubmit="glug(this); return false;">
-    <label for="Search" id="Search" name="Search">Search term:</label><br>
+  <form id="SearchForm" onsubmit="glug(this); return false;">
+    <label for="Search" id="Searchlb" name="Searchlb">Search term:</label><br>
     <input type="text" name="Search" id="Search"><br>
     <input type="submit" name="submit" value="Submit"/>
     <input type="reset" name="reset" value="Reset"/>
@@ -28,7 +28,7 @@
       else {
         //var formData = new FormData(bruh);
         console.log("Defining form data!");
-        var formData = new FormData(document.getElementById("Search"));
+        var formData = new FormData(document.getElementById("SearchForm"));
         console.log("Making request!");
         var xhr = new XMLHttpRequest();
         console.log("Request opening!");
@@ -45,7 +45,5 @@
       }
     }
   </script>
-</body>
-
 </body>
 </html>
