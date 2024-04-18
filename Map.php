@@ -45,7 +45,7 @@
         const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
         map = new Map(document.getElementById("map"), {
         center: { lat: <?php echo($reslat)?>, lng: <?php echo($reslong)?> },
-        zoom: 18,
+        zoom: 10,
         });
         <?php
          if ($opt != null) { 
