@@ -34,7 +34,7 @@
               echo '<td>' . $row['address'] . '</td>';
               echo '<td>' . $row['latitude'] . '</td>';
               echo '<td>' . $row['longitude'] . '</td>';
-              echo '</tr><br>';
+              echo '</tr>';
           }
       
       }

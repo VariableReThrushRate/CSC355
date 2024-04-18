@@ -2,15 +2,50 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="style.css"/>
-
+    <script type = "text/javascript" src="./valid.js"></script>
   <style>
 
   </style>
 
 </head>
 <body>
-
-  <p> add a page where you can insert text and it will come back with buildings</p>
+  <h1>Building Search area!</h1>
+  <form id="Search" onsubmit="glug(this); return false;">
+    <label for="Search" id="Search" name="Search">Search term:</label><br>
+    <input type="text" name="Search" id="Search"><br>
+    <input type="submit" name="submit" value="Submit"/>
+    <input type="reset" name="reset" value="Reset"/>
+  </form>
+  <div id="response"></div>
+  <script>
+    function glug(e){
+      console.log("Clicked!");
+      bruh = validsearch(e); 
+      if (bruh == null){
+        console.log("Was Null!");
+        document.getElementById('response').innerHTML = "Form Validation FAILED!";
+      }
+      else {
+        //var formData = new FormData(bruh);
+        console.log("Defining form data!");
+        var formData = new FormData(document.getElementById("Search"));
+        console.log("Making request!");
+        var xhr = new XMLHttpRequest();
+        console.log("Request opening!");
+        xhr.open("POST", "select.php", true);
+        console.log("Request opened!");
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          console.log(xhr.responseText);
+          document.getElementById('response').innerHTML = xhr.responseText;            
+      }
+      };
+      xhr.send(formData);
+      
+      }
+    }
+  </script>
+</body>
 
 </body>
 </html>
