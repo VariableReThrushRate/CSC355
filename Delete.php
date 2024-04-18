@@ -22,8 +22,8 @@
   <h1>Delete building: <?php echo($row['name']); ?>?</h1>
   <h1>Building Search area!</h1>
   <form id="DelForm" onsubmit="bug(this); return false;">
-    <input type="hidden" id="confirm" name="confirm" value="1">
     <input type="hidden" id="id" name="id" value="<?php echo($id)?>">
+    <input type="hidden" id="confirm" name="confirm" value="1">
     <input type="submit" name="submit" value="Dew it"/>
   </form>
   <div id="response"></div>
@@ -43,9 +43,10 @@
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
           console.log(xhr.responseText);
           document.getElementById('response').innerHTML = xhr.responseText;}
+        }
         xhr.send(formData);
       
-      }
+      
     }
   </script>
 </body>
