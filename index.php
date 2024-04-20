@@ -15,8 +15,10 @@
 
    ?>
   <body>
-  <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <h1>Welcome to our site!</h1>
+    <p1>The purpose of this site is to chronicle all the buildings related to Saint Martin's University.<br>
+    Here you can <a href="Building_Search.html">Search for buildings</a>, <a href="Map.php">Check out our map with every site</a>, or check out this page with every buidling listed. <br>
+    Feel free to check out each building's details, or <a href="Building_Form.html">Insert your own!</a>
     <table border="1">
        <tr>
               <th>Building Name</th>
