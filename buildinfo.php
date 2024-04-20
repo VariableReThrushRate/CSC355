@@ -43,6 +43,7 @@
         </tbody>
     </table>
     <br>
+    <a href="Delete.php?id='<?php echo($row['id']); ?>'">Link to delete page!</a><br>
     <script>
       let map;
       // Initialize and add the map
