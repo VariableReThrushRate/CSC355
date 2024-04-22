@@ -1,11 +1,12 @@
-body {text-align: center;}
+body { text-align: center;}
 html { max-width: 1300px; margin: auto;}
-table { margin-left: auto; margin-right: auto;}
-.formleft {text-align: left !important;}
+table { margin-left: auto; margin-right: auto; }
+.formleft { text-align: left !important;}
 
   label {
     display: block;
     margin-top: 10px;
+
   }
 
   input {
@@ -32,18 +33,6 @@ table { margin-left: auto; margin-right: auto;}
     margin: auto;
   }
 
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
 
   input[type="submit"] {
     background-color: #BA0C2F;

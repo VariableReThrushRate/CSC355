@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head><title>CSC355 Project Main Page Test</title></head>
+  <head><title>CSC355 Project Main Page Test</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+
   <style>
     
   </style>
-  <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
   <?php
    $dbhost = "localhost";
    $dbuser = "viewer";
@@ -18,7 +20,7 @@
     <h1>Welcome to our site!</h1>
     <p1>The purpose of this site is to chronicle all the buildings related to Saint Martin's University.<br>
     Here you can <a href="Building_Search.html">Search for buildings</a>, <a href="Map.php">Check out our map with every site</a>, or check out this page with every buidling listed. <br>
-    Feel free to check out each building's details, or <a href="Building_Form.html">Insert your own!</a>
+    Feel free to check out each building's details, or <a href="Building_Form.html">Insert your own!</a></p1>
     <table border="1">
        <tr>
               <th>Building Name</th>
