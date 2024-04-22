@@ -6,7 +6,7 @@
   <style>
 
   </style>
-
+  <script>function nullify() {document.getElementById('response').innerHTML ="";}</script>
 </head>
 <body>
   <h1>Building Search Area!</h1>
@@ -14,7 +14,7 @@
     <label for="Search" id="Searchlb" name="Searchlb">Search term:</label><br>
     <input type="text" name="Search" id="Search"><br>
     <input type="submit" name="submit" value="Submit"/>
-    <input type="reset" name="reset" value="Reset"/>
+    <input type="reset" name="reset" value="Reset" onclick="nullify();"/>
   </form>
   <div id="response"></div>
   <script>
